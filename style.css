@@ -1,0 +1,12 @@
+body {
+    height: 2000px; /* Just to make the page scrollable for testing */
+    cursor: crosshair; /* Optional: Change cursor to a crosshair */
+}
+
+#cat-img {
+    position: fixed; /* Cat stays fixed relative to the viewport */
+    width: 100px;    /* Adjust cat size as needed */
+    height: auto;   /* Maintain aspect ratio */
+    pointer-events: none; /* Makes the cat image ignore mouse clicks */
+    transition: transform 0.1s ease-out; /* Smooth following */
+}
