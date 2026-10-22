@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:portfolio/oneko/oneko_overlay.dart';
+
 void main() => runApp(const PortfolioApp());
 
 class PortfolioApp extends StatelessWidget {
@@ -11,6 +13,8 @@ class PortfolioApp extends StatelessWidget {
       title: 'Yash\'s Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorSchemeSeed: Colors.indigo),
+      // TODO: Find out what this line of code actually does?
+      builder: (context, child) => OnekoOverlay(child: child!),
       home: const Scaffold(
         body: Center(child: Text('Hello, world!')),
       ),
