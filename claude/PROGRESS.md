@@ -44,8 +44,8 @@ Committed through `60fd095`. Yash's naming differs from the plan: route
 `/conway`, `ConwayPage` in `lib/pages/conway.dart`, files
 `lib/conway/game.dart` (ConwayLife), `grid_view.dart` (GridViewBoard),
 `painter.dart` (PaintedBoard/LifePainter), `lib/pages/not_found.dart`
-(all empty). Uncommitted: explanatory comments in `router.dart`,
-`main.dart`. Now on step 4a.
+(empty at start). Uncommitted: explanatory comments in `router.dart`,
+`main.dart`. 4a, 4b done (ConwayLife, GridViewBoard; analyze clean). Now on 4c.
 
 ### Next: routes + Game of Life (Yash writes the code)
 Yash asked for the whole plan up front: `claude/ROUTES_AND_LIFE.md`
