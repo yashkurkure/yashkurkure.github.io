@@ -42,6 +42,7 @@ dependencies:
 
   cellular_automaton_zoo:
     path: packages/cellular_automaton_zoo
+  go_router: ^18.1.1
 
 dev_dependencies:
   flutter_test:

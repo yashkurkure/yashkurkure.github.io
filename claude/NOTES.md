@@ -74,3 +74,13 @@ root `pubspec.yaml`, then add it as a dependency if the app uses it.
   `args` to the app.
 - **Separate git repo as a git dependency:** two places to keep in sync
   for code that's developed alongside the site.
+
+### Gotcha: `pub add` edits the pubspec of the current directory
+`flutter pub add <pkg>` / `dart pub add <pkg>` changes the `pubspec.yaml`
+of whatever folder the terminal is in. Running it inside
+`packages/cellular_automaton_zoo` adds the dependency to the library, not
+the website. Because the workspace shares one lock file, the import
+still resolves, so the only symptom is the analyzer's
+`depend_on_referenced_packages` info. Fix: `dart pub remove <pkg>` in the
+wrong folder, `flutter pub add <pkg>` in the right one. Check `pwd`
+first.
