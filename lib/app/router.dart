@@ -7,6 +7,7 @@ final router = GoRouter(
   routes : [
     // Pages inside the shell get the oneko cat on top.
     ShellRoute(
+      // builder wraps whatever page `child` is with the oneko cat overlay.
       builder: (context, state, child) => OnekoOverlay(child: child),
       routes: [
         GoRoute(path: '/', builder: (context, state) => const HomePage()),

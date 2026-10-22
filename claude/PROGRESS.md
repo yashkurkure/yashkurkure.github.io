@@ -39,6 +39,14 @@ project.
 - Flagged: this is a full solution to a course assignment Yash authored;
   the website repo is public. Yash decides whether to push.
 
+### Status 2026-10-22 (later): steps 1–3 done
+Committed through `60fd095`. Yash's naming differs from the plan: route
+`/conway`, `ConwayPage` in `lib/pages/conway.dart`, files
+`lib/conway/game.dart` (ConwayLife), `grid_view.dart` (GridViewBoard),
+`painter.dart` (PaintedBoard/LifePainter), `lib/pages/not_found.dart`
+(all empty). Uncommitted: explanatory comments in `router.dart`,
+`main.dart`. Now on step 4a.
+
 ### Next: routes + Game of Life (Yash writes the code)
 Yash asked for the whole plan up front: `claude/ROUTES_AND_LIFE.md`
 (7 steps with checkpoints). Not started as of 2026-10-22.
