@@ -23,6 +23,40 @@ project.
   - `oneko_controller.dart`, `oneko_sprites.dart`: empty placeholders.
   - `flutter analyze` clean, `flutter test` passes.
 
+## Checkpoint — 2026-10-22 (uncommitted)
+
+### Done (one-time exception: Claude wrote this code at Yash's request)
+- `packages/cellular_automaton_zoo/`: pure-Dart implementation of the
+  CS378 Project 1 spec (github.com/yashkurkure/CS378-Project1). Cell,
+  Grid (Set<Cell> of live cells), CellularAutomaton.step (double buffer),
+  ConwayRules, AsciiRenderable on Grid, DecoratedRenderable on
+  CellularAutomaton. `bin/main.dart` copied unchanged and runs.
+  16 tests in `test/`, all passing.
+- Root `pubspec.yaml`: `workspace: [packages/cellular_automaton_zoo]` +
+  path dependency, so the Flutter app can `import
+  'package:cellular_automaton_zoo/cellular_automaton_zoo.dart'`.
+- CI: added `dart test` step for the package.
+- Flagged: this is a full solution to a course assignment Yash authored;
+  the website repo is public. Yash decides whether to push.
+
+### Next: routes + Game of Life (Yash writes the code)
+Yash asked for the whole plan up front: `claude/ROUTES_AND_LIFE.md`
+(7 steps with checkpoints). Not started as of 2026-10-22.
+Yash wants GridView first, then CustomPainter / faster methods.
+1. go_router, `/` and `/life`.
+2. Oneko only on some pages: move `OnekoOverlay` from
+   `MaterialApp.builder` into a `ShellRoute`; `/life` sits outside it.
+3. Buttons: `context.go('/life')`, explicit back arrow on LifePage.
+4. LifePage with `GridViewBoard` (one ColoredBox per cell), `ConwayLife`
+   composition, `Timer.periodic`, Play/Pause/Step/New board, `dispose`.
+5. `PaintedBoard` + `LifePainter`; SegmentedButton toggles renderers;
+   compare with `showPerformanceOverlay` at 150×100.
+6. Optional speedups: painter `repaint:` ValueNotifier (no page
+   setState), RepaintBoundary, single Path, Ticker, Uint8List in library.
+7. `usePathUrlStrategy`, `NotFoundPage` via `errorBuilder`.
+
+## Earlier
+
 ### Not yet confirmed
 - Whether the static cat actually appears in the top-left in Chrome
   (step 1 visual check). Ask first thing next session.

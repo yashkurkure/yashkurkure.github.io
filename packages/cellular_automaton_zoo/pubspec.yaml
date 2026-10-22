@@ -1,0 +1,14 @@
+name: cellular_automaton_zoo
+description: Cellular automata (Conway's Game of Life and friends) in pure Dart, with a terminal CLI.
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.13.3
+
+resolution: workspace
+dependencies:
+  args: ^2.7.0
+  go_router: ^18.1.1
+dev_dependencies:
+  test: ^1.31.1

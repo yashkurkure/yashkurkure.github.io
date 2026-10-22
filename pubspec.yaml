@@ -21,6 +21,11 @@ version: 1.0.0+1
 environment:
   sdk: ^3.13.3
 
+# Local Dart packages that live in this repo. One `flutter pub get` here
+# resolves all of them.
+workspace:
+  - packages/cellular_automaton_zoo
+
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -34,6 +39,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+
+  cellular_automaton_zoo:
+    path: packages/cellular_automaton_zoo
 
 dev_dependencies:
   flutter_test:

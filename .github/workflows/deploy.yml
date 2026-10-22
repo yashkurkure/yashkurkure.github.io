@@ -27,6 +27,8 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
+      - run: dart test
+        working-directory: packages/cellular_automaton_zoo
       - run: flutter build web --release --wasm
       - run: cp build/web/index.html build/web/404.html
       - uses: actions/upload-pages-artifact@v3
